@@ -7,7 +7,7 @@ layout: page
 
 <!-- Create your slider and add images -->
 <div id="slider">
-<img src="{{ site.baseurl }}assets/images/car_on_road.JPG" alt="">
-<img data-src="{{ site.baseurl }}assets/images/employees.JPG" src="" alt="">
-<img data-src="{{ site.baseurl }}assets/images/check_bill_s_and_p.JPG" src="" alt="">
+<img src="{{ site.baseurl }}assets/images/web_car_on_road.jpg" alt="">
+<img data-src="{{ site.baseurl }}assets/images/web_employees.jpg" src="" alt="">
+<img data-src="{{ site.baseurl }}assets/images/web_check_bill_s_and_p.jpg" src="" alt="">
 </div>
