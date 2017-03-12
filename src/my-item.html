@@ -5,13 +5,23 @@
   <template>
     <style>
       :host {
+        @apply(--layout-vertical);
+        @apply(--layout-center-justified);
+        text-align: center;
+      }
+      .item-image {
+        margin: 32px 0 16px;
+        width: 100%;
+        display: block;
       }
       .title {
+        color: var(--app-primary-color);
       }
       .description {
+        color: var(--app-secondary-color);
       }
     </style>
-    <img src="[[item.src]]" alt="[[item.titel]]"></img>
+    <img class="item-image" src="[[item.src]]" alt="[[item.titel]]"></img>
     <div class="title">[[item.title]]</div>
     <div class="description">[[item.description]]</div>
   </template>
