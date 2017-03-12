@@ -67,6 +67,14 @@
         color: black;
         font-weight: bold;
       }
+
+      footer {
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin-top: 20px;
+      }
     </style>
 
     <app-location route="{{route}}"></app-location>
@@ -114,6 +122,10 @@
         <my-products-and-services name="products_and_services"></my-products-and-services>
         <my-view404 name="view404"></my-view404>
       </iron-pages>
+      <footer>
+        <div>Diamond Dust Ice - <a>thaiiceproduction@hotmail.com</a></div>
+        <div>© Copyright 2014, Diamond Dust. All Rights Reserved.</div>
+      </footer>
   </template>
 
   <script>
@@ -129,6 +141,10 @@
       {
         name: 'products_and_services',
         title: 'Products & Services',
+      },
+      {
+        name: 'branches',
+        title: 'Branches',
       },
     ];
     class MyApp extends Polymer.Element {
