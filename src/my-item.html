@@ -1,0 +1,31 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+
+<dom-module id="my-item">
+  <template>
+    <style>
+      :host {
+      }
+      .title {
+      }
+      .description {
+      }
+    </style>
+    <img src="[[item.src]]" alt="[[item.titel]]"></img>
+    <div class="title">[[item.title]]</div>
+    <div class="description">[[item.description]]</div>
+  </template>
+  <script>
+    class MyItem extends Polymer.Element {
+      static get is() { return 'my-item'; }
+      static get properties() {
+        return {
+          item: Object,
+        };
+      }
+    }
+    window.customElements.define(MyItem.is, MyItem);
+
+  </script>
+</dom-module>
+

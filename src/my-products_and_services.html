@@ -1,0 +1,76 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/iron-flex-layout/iron-flex-layout.html">
+<link rel="import" href="../bower_components/paper-button/paper-button.html">
+<link rel="import" href="../bower_components/paper-card/paper-card.html">
+<link rel="import" href="my-item.html">
+<link rel="import" href="shared-styles.html">
+
+<dom-module id="my-products-and-services">
+  <template>
+    <style include="shared-styles">
+      :host {
+        display: block;
+        padding: 10px;
+      }
+
+      .grid {
+        @apply(--layout-horizontal);
+        @apply(--layout-wrap);
+        @apply(--layout-justified);
+        margin: 0 10px 32px 10px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .grid li {
+        -webkit-flex: 1 1;
+        flex: 1 1;
+        -webkit-flex-basis: 33%;
+        flex-basis: 33%;
+        max-width: 33%;
+      }
+
+    </style>
+
+    <ul class="grid">
+      <template is="dom-repeat" items="[[items]]" as="item" initial-count="4">
+        <li>
+          <my-item item="[[item]]"></my-item>
+        </li>
+      </template>
+    </ul>
+  </template>
+
+  <script>
+    class MyProductsAndServices extends Polymer.Element {
+      static get is() { return 'my-products-and-services'; }
+      static get properties() {
+        return {
+          items: {
+            type: Array,
+            value: [
+              {
+                src: '../images/',
+                title: 'น้ำแข็งป่น',
+                description: 'เหมาะสำหรับ การแช่ของสด แช่น้ำขวด กระสอบ Reuse 22 กิโลกรัม',
+              },
+              {
+                src: '../images/',
+                title: 'น้ำแข็งหลอดใหญ่',
+                description: 'เหมาะสำหรับ ใช้รับประทาน',
+              },
+              {
+                src: '../images/',
+                title: 'น้ำแข็งหลอดเล็ก',
+                description: '',
+              },
+            ],
+            readOnly: true,
+          }
+        };
+      }
+    }
+
+    window.customElements.define(MyProductsAndServices.is, MyProductsAndServices);
+  </script>
+</dom-module>
